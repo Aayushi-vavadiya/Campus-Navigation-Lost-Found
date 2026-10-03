@@ -1,6 +1,10 @@
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [isRegister, setIsRegister] = useState(false);
 
   const [name, setName] = useState("");
@@ -11,12 +15,16 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    // Check required fields
     if (!email || !password || (isRegister && !name)) {
       alert("Please fill all required fields.");
       return;
     }
 
     try {
+      // =========================
+      // REGISTER
+      // =========================
       if (isRegister) {
         const response = await fetch(
           `${import.meta.env.VITE_API_URL}/api/register`,
@@ -26,9 +34,9 @@ function Login() {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              name,
-              email,
-              password,
+              name: name,
+              email: email,
+              password: password,
             }),
           }
         );
@@ -42,44 +50,61 @@ function Login() {
 
         alert("Registration successful! Please login.");
 
-        setIsRegister(false);
+        // Clear all fields
         setName("");
         setEmail("");
         setPassword("");
         setShowPassword(false);
-      } else {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/login`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email,
-              password,
-            }),
-          }
-        );
 
-        const data = await response.json();
+        // Switch to Login
+        setIsRegister(false);
 
-        if (!response.ok) {
-          alert(data.message || "Login failed.");
-          return;
-        }
-
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("user", JSON.stringify(data.user));
-
-        alert("Login successful!");
-
-        setEmail("");
-        setPassword("");
-        setShowPassword(false);
+        return;
       }
+
+      // =========================
+      // LOGIN
+      // =========================
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message || "Login failed.");
+        return;
+      }
+
+      // Save login information
+      localStorage.setItem("token", data.token);
+      localStorage.setItem(
+        "user",
+        JSON.stringify(data.user)
+      );
+
+      // Clear login fields
+      setName("");
+      setEmail("");
+      setPassword("");
+      setShowPassword(false);
+
+      alert("Login successful!");
+
+      // Go to Home page
+      navigate("/");
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Login error:", error);
 
       alert(
         "Unable to connect to backend. Please make sure the backend is running."
@@ -89,6 +114,8 @@ function Login() {
 
   function switchMode() {
     setIsRegister(!isRegister);
+
+    // Clear fields when switching
     setName("");
     setEmail("");
     setPassword("");
@@ -100,7 +127,9 @@ function Login() {
       <div className="login-card">
 
         <h1>
-          {isRegister ? "Create Account" : "Welcome Back"}
+          {isRegister
+            ? "Create Account"
+            : "Welcome Back"}
         </h1>
 
         <p>
@@ -109,30 +138,49 @@ function Login() {
             : "Login to your CampusConnect account"}
         </p>
 
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          autoComplete="off"
+        >
 
+          {/* NAME - REGISTER ONLY */}
           {isRegister && (
             <input
               type="text"
               placeholder="Full Name"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) =>
+                setName(e.target.value)
+              }
+              autoComplete="off"
             />
           )}
 
+          {/* EMAIL */}
           <input
             type="email"
             placeholder="Email Address"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) =>
+              setEmail(e.target.value)
+            }
+            autoComplete="off"
           />
 
+          {/* PASSWORD */}
           <div className="password-field">
             <input
-              type={showPassword ? "text" : "password"}
+              type={
+                showPassword
+                  ? "text"
+                  : "password"
+              }
               placeholder="Password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) =>
+                setPassword(e.target.value)
+              }
+              autoComplete="new-password"
             />
 
             <span
@@ -141,16 +189,21 @@ function Login() {
                 setShowPassword(!showPassword)
               }
             >
-              {showPassword ? "Hide" : "Show"}
+              {showPassword
+                ? "Hide"
+                : "Show"}
             </span>
           </div>
 
+          {/* SUBMIT */}
           <button type="submit">
-            {isRegister ? "Register" : "Login"}
+            {isRegister
+              ? "Register"
+              : "Login"}
           </button>
-
         </form>
 
+        {/* SWITCH LOGIN / REGISTER */}
         <p className="register-text">
           {isRegister
             ? "Already have an account? "
@@ -158,9 +211,13 @@ function Login() {
 
           <span
             onClick={switchMode}
-            style={{ cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+            }}
           >
-            {isRegister ? "Login" : "Register"}
+            {isRegister
+              ? "Login"
+              : "Register"}
           </span>
         </p>
 
