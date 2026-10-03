@@ -21,7 +21,7 @@ function LostFound() {
   // ==========================================
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/items", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/items`, {
   headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`,
   },
@@ -100,7 +100,7 @@ function LostFound() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/items",
+        `${import.meta.env.VITE_API_URL}/api/items`,
         {
           method: "POST",
           headers: {
