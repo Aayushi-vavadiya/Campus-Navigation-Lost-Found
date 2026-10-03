@@ -1,0 +1,2719 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 500px;
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons button {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-buttons button:hover {
+  background: #1d4ed8;
+}
+
+.hero-buttons .secondary-btn {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+/* Features */
+
+.features {
+  padding: 70px 7%;
+  text-align: center;
+  background: white;
+}
+
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.feature-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 300px;
+  padding: 30px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+/* Common Pages */
+
+.page-container {
+  min-height: calc(100vh - 70px);
+  padding: 60px 7%;
+  background: #f5f7fb;
+}
+
+.page-container h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.page-description {
+  color: #6b7280;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Search */
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  width: 400px;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-box button,
+.lost-found-buttons button,
+.item-card button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+/* Map */
+
+.map-placeholder {
+  min-height: 400px;
+  background: #eaf2ff;
+  border: 2px dashed #93c5fd;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+}
+
+.map-icon {
+  font-size: 60px;
+}
+
+.location-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.location-list div {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+/* Lost & Found */
+
+.lost-found-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.items-container {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  width: 280px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.item-image {
+  font-size: 60px;
+  text-align: center;
+  padding: 20px;
+}
+
+.item-card h3 {
+  margin-bottom: 10px;
+}
+
+.item-card p {
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+.lost-status,
+.found-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lost-status {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.found-status {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* Login */
+
+.login-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+}
+
+.login-card {
+  width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h1 {
+  margin-bottom: 10px;
+}
+
+.login-card > p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-text span {
+  color: #2563eb;
+  cursor: pointer;
+}
+/* LDCE Campus Navigation */
+
+.ldce-map-box {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 35px;
+}
+
+.ldce-map-box h2 {
+  margin-bottom: 10px;
+}
+
+.ldce-map-box p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.map-button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.campus-locations h2 {
+  margin-bottom: 20px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.campus-location-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.campus-location-card span {
+  font-size: 22px;
+}
+
+.campus-location-card p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.no-results {
+  color: #6b7280;
+}
+.page-container h1,
+.campus-locations h2,
+.ldce-map-box h2 {
+  color: #111827;
+}
+
+.ldce-map-box {
+  color: #111827;
+}
+
+.ldce-map-box p {
+  color: #6b7280;
+}
+/* Fix Campus Search Box */
+
+.page-container .search-box input {
+  background: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.page-container .search-box input::placeholder {
+  color: #6b7280;
+}
+
+.page-container .search-box input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+/* ================================
+   CAMPUS MAP
+================================ */
+
+.campus-search {
+  display: flex;
+  gap: 10px;
+  max-width: 700px;
+  margin-bottom: 12px;
+}
+
+.campus-search input {
+  flex: 1;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  color: #111827;
+}
+
+.campus-search input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.campus-search button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Search results */
+
+.search-results {
+  max-width: 700px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.search-result {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  background: white;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.search-result:hover {
+  background: #f5f8ff;
+}
+
+.search-result span {
+  font-size: 20px;
+}
+
+.search-result strong {
+  display: block;
+  color: #111827;
+  font-size: 14px;
+}
+
+.search-result small {
+  display: block;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+/* Interactive map */
+
+.interactive-map-section {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.interactive-map-section h2 {
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.map-help {
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* Selected location */
+
+.selected-location-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 12px 15px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+}
+
+.selected-location-box span {
+  font-size: 20px;
+}
+
+.selected-location-box strong {
+  display: block;
+  color: #1e3a8a;
+}
+
+.selected-location-box small {
+  color: #64748b;
+}
+
+/* Official LDCE map */
+
+.ldce-map-box {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.ldce-map-box h2 {
+  margin-bottom: 7px;
+}
+
+.ldce-map-box p {
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+.official-ldce-map {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Location cards */
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  );
+  gap: 14px;
+}
+
+.campus-location-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.campus-location-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.campus-location-card span {
+  font-size: 20px;
+}
+
+.campus-location-card p {
+  margin: 0;
+  color: #111827;
+  font-weight: 600;
+}
+
+.campus-location-card small {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.selected-card {
+  border: 2px solid #2563eb;
+  background: #eff6ff;
+}
+
+.facilities-section {
+  margin-top: 35px;
+}
+
+.no-results {
+  color: #dc2626;
+  margin: 12px 0;
+}
+/* ================================
+   DIRECTIONS
+================================ */
+
+.selected-location-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+}
+
+.selected-location-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-location-icon {
+  font-size: 22px;
+}
+
+.selected-location-info strong {
+  display: block;
+  color: #1e3a8a;
+  font-size: 15px;
+}
+
+.selected-location-info small {
+  display: block;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.directions-button {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.directions-button:hover {
+  background: #1d4ed8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .selected-location-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .directions-button {
+    width: 100%;
+  }
+}
+.selected-location-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+}
+
+.selected-location-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-location-icon {
+  font-size: 22px;
+}
+
+.selected-location-info strong {
+  display: block;
+  color: #1e3a8a;
+}
+
+.destination-name {
+  display: block;
+  color: #111827;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.selected-location-info small {
+  display: block;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.directions-button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.directions-button:hover {
+  background: #1d4ed8;
+}
+/* ===============================
+   SEARCH RESULTS
+================================ */
+
+.search-results {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.search-results h3 {
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 15px;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: #f8fafc;
+}
+
+.search-result-item strong {
+  display: block;
+  color: #111827;
+}
+
+.search-result-item small {
+  display: block;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+
+/* ===============================
+   SELECTED DESTINATION
+================================ */
+
+.selected-location-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 12px;
+  margin-bottom: 25px;
+  padding: 15px 18px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+}
+
+.selected-location-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selected-location-icon {
+  font-size: 24px;
+}
+
+.selected-location-info strong {
+  display: block;
+  color: #1e3a8a;
+}
+
+.destination-name {
+  display: block;
+  color: #111827;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.selected-location-info small {
+  display: block;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+
+/* ===============================
+   DIRECTIONS BUTTON
+================================ */
+
+.directions-button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.directions-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ===============================
+   INTERACTIVE MAP
+================================ */
+
+.interactive-map-section {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.interactive-map-section h2 {
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.interactive-map-section p {
+  color: #6b7280;
+}
+
+
+/* ===============================
+   LOCATION CARDS
+================================ */
+
+.campus-location-card {
+  transition: 0.2s;
+}
+
+.campus-location-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+/* ===============================
+   DESTINATION INSIDE MAP
+================================ */
+
+.interactive-map-section {
+  position: relative;
+}
+
+.map-destination-box {
+  position: absolute;
+  top: 75px;
+  left: 25px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 250px;
+  max-width: 350px;
+
+  padding: 14px 18px;
+
+  background: white;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  pointer-events: none;
+}
+
+.map-destination-icon {
+  font-size: 25px;
+}
+
+.map-destination-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.map-destination-box strong {
+  display: block;
+  color: #111827;
+  font-size: 16px;
+}
+
+.map-destination-box small {
+  display: block;
+  color: #64748b;
+  margin-top: 3px;
+}
+/* ======================================================
+   MAP DESTINATION CONTROL
+====================================================== */
+
+.map-destination-control {
+  background: white;
+  min-width: 280px;
+  max-width: 360px;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-left: 5px solid #2563eb;
+}
+
+.destination-control-icon {
+  font-size: 27px;
+}
+
+.destination-control-content {
+  line-height: 1.3;
+}
+
+.destination-control-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 0.8px;
+  margin-bottom: 3px;
+}
+
+.destination-control-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.destination-control-details {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+
+/* ======================================================
+   GET DIRECTIONS BAR
+====================================================== */
+
+.map-direction-bar {
+  margin-top: 12px;
+
+  padding: 15px 18px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.map-direction-bar span {
+  display: block;
+
+  font-size: 12px;
+
+  color: #2563eb;
+
+  font-weight: 700;
+
+  margin-bottom: 4px;
+}
+
+.map-direction-bar strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 16px;
+}
+
+
+/* ======================================================
+   DIRECTIONS BUTTON
+====================================================== */
+
+.directions-button {
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.directions-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ======================================================
+   SEARCH RESULTS
+====================================================== */
+
+.search-results {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.search-results h3 {
+  margin-bottom: 15px;
+
+  color: #111827;
+}
+
+.search-result-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background: #f8fafc;
+}
+
+.search-result-item strong {
+  display: block;
+
+  color: #111827;
+}
+
+.search-result-item small {
+  display: block;
+
+  color: #6b7280;
+
+  margin-top: 4px;
+}
+/* ======================================================
+   DESTINATION INSIDE MAP
+====================================================== */
+
+.map-destination-control {
+  background: white;
+  min-width: 280px;
+  max-width: 360px;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-left: 5px solid #2563eb;
+}
+
+.destination-control-icon {
+  font-size: 27px;
+}
+
+.destination-control-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 0.8px;
+}
+
+.destination-control-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 3px;
+}
+
+.destination-control-details {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+
+/* ======================================================
+   DIRECTIONS BAR
+====================================================== */
+
+.map-direction-bar {
+  margin-top: 12px;
+  padding: 15px 18px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.map-direction-bar span {
+  display: block;
+
+  font-size: 12px;
+
+  color: #2563eb;
+
+  font-weight: 700;
+
+  margin-bottom: 4px;
+}
+
+.map-direction-bar strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 16px;
+}
+
+
+/* ======================================================
+   GET DIRECTIONS BUTTON
+====================================================== */
+
+.directions-button {
+  padding: 11px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.directions-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* ======================================================
+   SEARCH RESULTS
+====================================================== */
+
+.search-results {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.search-results h3 {
+  margin-bottom: 15px;
+
+  color: #111827;
+}
+
+.search-result-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background: #f8fafc;
+}
+
+.search-result-item strong {
+  display: block;
+
+  color: #111827;
+}
+
+.search-result-item small {
+  display: block;
+
+  color: #6b7280;
+
+  margin-top: 4px;
+}
+/* =====================================================
+   MAP DESTINATION
+===================================================== */
+
+.map-destination-control {
+  background: white;
+  min-width: 260px;
+  max-width: 340px;
+
+  padding: 15px 18px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+
+  border-left: 5px solid #2563eb;
+}
+
+.destination-control-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 1px;
+}
+
+.destination-control-to {
+  font-size: 12px;
+  font-weight: 800;
+  color: #2563eb;
+  margin-top: 3px;
+}
+
+.destination-control-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 4px;
+}
+
+.destination-control-block {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+
+/* =====================================================
+   DIRECTIONS BAR
+===================================================== */
+
+.map-direction-bar {
+  margin-top: 12px;
+
+  padding: 16px 18px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.map-direction-bar span {
+  display: block;
+
+  font-size: 11px;
+
+  color: #2563eb;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  margin-bottom: 3px;
+}
+
+.map-direction-bar strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 16px;
+
+  margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   GET DIRECTIONS BUTTON
+===================================================== */
+
+.directions-button {
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.directions-button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =====================================================
+   SEARCH RESULTS
+===================================================== */
+
+.search-results {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.search-results h3 {
+  margin-bottom: 15px;
+
+  color: #111827;
+}
+
+.search-result-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 13px 15px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background: #f8fafc;
+}
+
+.search-result-item strong {
+  display: block;
+
+  color: #111827;
+}
+
+.search-result-item small {
+  display: block;
+
+  color: #6b7280;
+
+  margin-top: 4px;
+}
+/* ==========================================
+   CAMPUS MAP
+========================================== */
+
+.campus-map-page {
+  min-height: 100vh;
+  padding: 45px 6%;
+  background: #f5f7fb;
+}
+
+/* HEADER */
+
+.campus-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.campus-header h1 {
+  color: #111827;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.campus-header p {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+/* SEARCH */
+
+.campus-search-section {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.campus-search-section input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: white;
+  color: #111827;
+  font-size: 16px;
+  outline: none;
+}
+
+.campus-search-section input:focus {
+  border-color: #2563eb;
+}
+
+/* SEARCH RESULTS */
+
+.search-results {
+  position: absolute;
+  z-index: 2000;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  margin-top: 5px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-result {
+  padding: 14px 18px;
+  cursor: pointer;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.search-result:hover {
+  background: #eff6ff;
+}
+
+.search-result strong {
+  display: block;
+  color: #111827;
+  font-size: 15px;
+}
+
+.search-result small {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.no-result {
+  position: absolute;
+  z-index: 2000;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+  color: #6b7280;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* MAP */
+
+.interactive-map-section {
+  width: 100%;
+  height: 550px;
+  margin-top: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.campus-leaflet-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* POPUP */
+
+.map-popup {
+  min-width: 200px;
+}
+
+.map-popup h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 17px;
+}
+
+.map-popup p {
+  margin: 6px 0;
+  color: #4b5563;
+}
+
+.map-popup button {
+  margin-top: 10px;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.map-popup button:hover {
+  background: #1d4ed8;
+}
+
+/* SELECTED LOCATION */
+
+.selected-location-card {
+  margin-top: 25px;
+  padding: 22px 25px;
+  background: white;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.selected-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #2563eb;
+  letter-spacing: 1px;
+}
+
+.selected-location-card h2 {
+  margin: 6px 0;
+  color: #111827;
+}
+
+.selected-location-card p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.selected-location-card button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.selected-location-card button:hover {
+  background: #1d4ed8;
+}
+
+/* OFFICIAL MAP */
+
+.official-map-section {
+  margin-top: 45px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.official-map-section h2 {
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.official-map-section p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.official-ldce-map {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .campus-map-page {
+    padding: 30px 4%;
+  }
+
+  .campus-header h1 {
+    font-size: 30px;
+  }
+
+  .interactive-map-section {
+    height: 450px;
+  }
+
+  .selected-location-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .selected-location-card button {
+    width: 100%;
+  }
+}
+/* ==========================================
+   CAMPUS MAP PAGE
+========================================== */
+
+.campus-map-page {
+  min-height: 100vh;
+  padding: 45px 6%;
+  background: #f5f7fb;
+}
+
+/* HEADER */
+
+.campus-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.campus-header h1 {
+  color: #111827;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.campus-header p {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+/* SEARCH */
+
+.campus-search-area {
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+}
+
+.search-row input {
+  flex: 1;
+  padding: 15px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: white;
+  color: #111827;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-row input:focus {
+  border-color: #2563eb;
+}
+
+.search-row button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-row button:hover {
+  background: #1d4ed8;
+}
+
+/* LOCATION SELECTION */
+
+.location-selection-section {
+  margin-bottom: 30px;
+}
+
+.location-selection-section h2 {
+  color: #111827;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.location-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 14px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.location-select-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 17px;
+
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 11px;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+  transition: 0.2s;
+}
+
+.location-select-card:hover {
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+}
+
+.location-select-card.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.location-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+  border-radius: 10px;
+
+  font-size: 23px;
+}
+
+.location-info h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 15px;
+}
+
+.location-info p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.no-result-box {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* MAP */
+
+.interactive-map-section {
+  width: 100%;
+  height: 550px;
+  margin-top: 25px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.campus-leaflet-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* MAP POPUP */
+
+.map-popup {
+  min-width: 200px;
+}
+
+.map-popup h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 17px;
+}
+
+.map-popup p {
+  margin: 6px 0;
+  color: #4b5563;
+}
+
+.map-popup button {
+  margin-top: 10px;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.map-popup button:hover {
+  background: #1d4ed8;
+}
+
+/* SELECTED LOCATION */
+
+.selected-location-card {
+  margin-top: 25px;
+  padding: 22px 25px;
+
+  background: white;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.selected-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #2563eb;
+  letter-spacing: 1px;
+}
+
+.selected-location-card h2 {
+  margin: 6px 0;
+  color: #111827;
+}
+
+.selected-location-card p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.selected-location-card button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.selected-location-card button:hover {
+  background: #1d4ed8;
+}
+
+/* OFFICIAL MAP */
+
+.official-map-section {
+  margin-top: 45px;
+  padding: 30px;
+
+  background: white;
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.official-map-section h2 {
+  color: #111827;
+}
+
+.official-map-section p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.official-ldce-map {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .campus-map-page {
+    padding: 30px 4%;
+  }
+
+  .campus-header h1 {
+    font-size: 30px;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .search-row button {
+    width: 100%;
+  }
+
+  .interactive-map-section {
+    height: 450px;
+  }
+
+  .selected-location-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .selected-location-card button {
+    width: 100%;
+  }
+}
+/* =========================
+   LOST & FOUND
+========================= */
+
+.lost-found-page {
+  min-height: 100vh;
+  padding: 45px 6%;
+  background: #f5f7fb;
+}
+
+.lost-found-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lost-found-header h1 {
+  font-size: 38px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.lost-found-header p {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+/* ACTION BUTTONS */
+
+.lost-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.lost-button,
+.found-button {
+  border: none;
+  padding: 14px 22px;
+  border-radius: 9px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.lost-button {
+  background: #dc2626;
+}
+
+.lost-button:hover {
+  background: #b91c1c;
+}
+
+.found-button {
+  background: #16a34a;
+}
+
+.found-button:hover {
+  background: #15803d;
+}
+
+/* SEARCH */
+
+.lost-found-search {
+  max-width: 850px;
+  margin: 0 auto 35px;
+  display: flex;
+  gap: 10px;
+}
+
+.lost-found-search input {
+  flex: 1;
+  padding: 15px 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: white;
+  color: #111827;
+  font-size: 16px;
+  outline: none;
+}
+
+.lost-found-search input:focus {
+  border-color: #2563eb;
+}
+
+.lost-found-search button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ITEMS */
+
+.items-section {
+  margin-top: 20px;
+}
+
+.items-heading {
+  margin-bottom: 20px;
+}
+
+.items-heading h2 {
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.items-heading p {
+  color: #6b7280;
+}
+
+.lost-found-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.lost-found-card {
+  background: white;
+  padding: 22px;
+  border-radius: 13px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  transition: 0.2s;
+}
+
+.lost-found-card:hover {
+  transform: translateY(-3px);
+}
+
+.item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.item-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.status-lost,
+.status-found {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.status-lost {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status-found {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.lost-found-card h3 {
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.lost-found-card p {
+  color: #6b7280;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.item-description {
+  min-height: 40px;
+}
+
+.details-button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+/* NO ITEMS */
+
+.no-items {
+  background: white;
+  padding: 45px;
+  border-radius: 12px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.no-items div {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* FORM */
+
+.report-form-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.report-form {
+  width: 100%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  margin: 0;
+  color: #111827;
+}
+
+.close-form {
+  border: none;
+  background: #f3f4f6;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.report-form label {
+  display: block;
+  margin: 13px 0 7px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+  color: #111827;
+}
+
+.report-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.report-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus {
+  border-color: #2563eb;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.cancel-button,
+.submit-button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.cancel-button {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.submit-button {
+  background: #2563eb;
+  color: white;
+}
+
+.submit-button:hover {
+  background: #1d4ed8;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .lost-found-page {
+    padding: 30px 4%;
+  }
+
+  .lost-found-header h1 {
+    font-size: 30px;
+  }
+
+  .lost-found-actions {
+    flex-direction: column;
+  }
+
+  .lost-button,
+  .found-button {
+    width: 100%;
+  }
+
+  .lost-found-search {
+    flex-direction: column;
+  }
+
+  .lost-found-search button {
+    width: 100%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+}
+/* =========================
+   UPDATED LOST & FOUND
+========================= */
+
+.section-title {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.section-title h2 {
+  margin: 0 0 5px;
+  color: #111827;
+}
+
+.section-title p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.lost-section-title {
+  border-left: 5px solid #dc2626;
+  padding-left: 15px;
+}
+
+.found-section-title {
+  border-left: 5px solid #16a34a;
+  padding-left: 15px;
+}
+
+.found-items-section {
+  margin-top: 50px;
+}
+
+.card-category {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.details-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.details-modal {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 15px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details-header h2 {
+  margin: 0;
+  color: #111827;
+}
+
+.close-details {
+  border: none;
+  background: #f3f4f6;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.details-icon {
+  width: 80px;
+  height: 80px;
+  margin: 25px auto 15px;
+  border-radius: 15px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.details-modal h3 {
+  margin-bottom: 12px;
+  color: #111827;
+  font-size: 24px;
+}
+
+.details-info {
+  margin-top: 25px;
+  padding: 18px;
+  background: #f9fafb;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.details-info p {
+  margin: 12px 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.close-details-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+/* ================================
+   SIMPLE LOST & FOUND LIST
+================================ */
+
+.simple-list-section {
+  max-width: 900px;
+  margin: 25px auto 0;
+}
+
+.found-list-section {
+  margin-top: 35px;
+}
+
+.simple-section-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.lost-title {
+  color: #dc2626;
+}
+
+.found-title {
+  color: #15803d;
+}
+
+.simple-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.simple-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 5px 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+}
+
+.simple-item-name {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.simple-view-button {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+.simple-view-button:hover {
+  text-decoration: underline;
+}
+
+.no-items {
+  font-size: 12px;
+  color: #6b7280;
+  padding: 10px 0;
+}
+/* ================================
+   LOST & FOUND - SIDE BY SIDE
+================================ */
+
+.simple-list-section {
+  width: 45%;
+  margin: 25px 0 0;
+}
+
+.lost-found-page {
+  padding: 20px 40px;
+}
+
+.lost-found-page > .simple-list-section {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.lost-found-page > .found-list-section {
+  margin-left: 5%;
+  margin-top: 25px;
+}
+
+.simple-section-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.simple-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.simple-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 5px 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+}
+
+.simple-item-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.simple-view-button {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+.simple-view-button:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .simple-list-section {
+    width: 100%;
+  }
+
+  .lost-found-page > .found-list-section {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+/* Login input text */
+.login-card input {
+  color: white;
+}
+
+/* Placeholder text */
+.login-card input::placeholder {
+  color: white;
+  opacity: 1;
+}
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 60px;
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.show-password-text {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 9px;
+  color: #2563eb;
+  cursor: pointer;
+  user-select: none;
+}
