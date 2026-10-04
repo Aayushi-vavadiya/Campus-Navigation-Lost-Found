@@ -2768,3 +2768,6 @@ body {
   justify-content: center;
   align-items: center;
 }
+.features h2 {
+  color: #374151 !important;
+}
