@@ -2750,3 +2750,17 @@ body {
   right: auto !important;
   bottom: auto !important;
 }
+/* HOME PAGE TEXT ALIGNMENT */
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1,
+.hero-content p {
+  text-align: center;
+}
+
+/* FEATURES HEADING */
+.features h2 {
+  color: #374151;
+}
