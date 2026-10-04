@@ -2717,3 +2717,36 @@ body {
   cursor: pointer;
   user-select: none;
 }
+.login-title {
+  margin: 0 0 10px;
+  color: #374151;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.login-subtitle {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+/* FINAL LOGIN TITLE FIX */
+.login-card h1,
+.login-title {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+
+  color: #374151 !important;
+  font-size: 30px !important;
+  line-height: 38px !important;
+  font-weight: 700 !important;
+
+  transform: none !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+}
